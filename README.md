@@ -1,6 +1,6 @@
-PlayForever app for CSE485 capstone
+# PlayForever app for CSE485 capstone
 
-* Members
+## Group Members
 - Edgar Aquino Barrientos
 - Saud Al Kalbani
 - Yongzai Xuan
