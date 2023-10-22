@@ -16,6 +16,9 @@ struct ContentView: View {
             Text("Playforever !")
         }
         .padding()
+        Button("Detailed view", action: {
+            Text("Deatiled View")
+        })
     }
 }
 
