@@ -1,25 +1,21 @@
 import { React } from 'react';
 import { ScrollView, StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 
-const Home = ({ navigation }) => {
+import HomeBanner from './HomeBanner'
+
+const Home = () => {
   return (
     <SafeAreaView style={{backgroundColor:'#fefefe'}}>
 
-      { /* MEMBER LOGO */ }
-      <TouchableOpacity
-        style={styles.member_logo}
-        onPress={() => navigation.navigate('MemberPage')}
-      >
-        <Text>Member Page</Text>
-      </TouchableOpacity>
+      { /* Home banner */ }
+      <HomeBanner/>
 
-      {/* Scrollable area */}
+      { /* Scrollable area */ }
       <ScrollView
-        style={{marginTop: 50, marginBottom: 0, backgroundColor: '#fefefe'}}
+        style={{backgroundColor: '#992323', paddingTop: '3%'}}
         scrollEventThrottle={4}
       >
-
-        {/* Annual Report Button */}
+        { /* Annual Report Button */ }
         <View style={{alignItems:'center'}}>
           <TouchableOpacity
             style={styles.annual_report}
@@ -31,7 +27,7 @@ const Home = ({ navigation }) => {
           </TouchableOpacity>
         </View>
 
-        {/* Content */}
+        { /* Content */ }
 
       </ScrollView>
     </SafeAreaView>
@@ -48,13 +44,6 @@ const styles = StyleSheet.create({
     padding: 10,
     marginBottom: 10,
   },
-  member_logo: {
-    width: 80,
-    height: 80,
-    borderWidth: 1,
-    borderRadius: '100%',
-    backgroundColor: 'red'
-  }
 });
 
 export default Home;
