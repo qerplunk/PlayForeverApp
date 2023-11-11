@@ -29,7 +29,6 @@ const HomeBanner = () => {
 const banner = StyleSheet.create({
   background: {
     backgroundColor: COLORS.navy_blue,
-    height: '2.3%',
   },
   contents: {
     flexDirection: 'row',

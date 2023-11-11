@@ -5,31 +5,34 @@ import HomeBanner from './HomeBanner'
 
 const Home = () => {
   return (
-    <SafeAreaView style={{backgroundColor:'#fefefe'}}>
+    <SafeAreaView style={{backgroundColor:'red'}}>
 
       { /* Home banner */ }
       <HomeBanner/>
 
       { /* Scrollable area */ }
-      <ScrollView
-        style={{backgroundColor: '#992323', paddingTop: '3%'}}
-        scrollEventThrottle={4}
-      >
-        { /* Annual Report Button */ }
-        <View style={{alignItems:'center'}}>
-          <TouchableOpacity
-            style={styles.annual_report}
-            onPress={() => console.log("Annual Report page not implemented")}
-          >
-            <Text>
-              2022 annual report
-            </Text>
-          </TouchableOpacity>
-        </View>
+     <View style={{backgroundColor: 'red'}}>
+        <ScrollView
+          style={{backgroundColor: 'blue'}}
+          scrollEventThrottle={4}
+        >
 
-        { /* Content */ }
+          { /* Annual Report Button */ }
+          <View style={{alignItems:'center'}}>
+            <TouchableOpacity
+              style={styles.annual_report}
+              onPress={() => console.log("Annual Report page not implemented")}
+            >
+              <Text>
+                2022 annual report
+              </Text>
+            </TouchableOpacity>
+          </View>
 
-      </ScrollView>
+          { /* Content */ }
+
+        </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };
