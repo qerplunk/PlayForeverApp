@@ -13,8 +13,8 @@ const buttonWidth = frameWidth / 3;
 const GetButtons = () => {
   const getImageSource = (buttonName) => {
     switch (buttonName) {
-      case 'Partnerships':
-        return require('./assets/partnerships_button_background.png');
+      case 'Upcoming Events':
+        return require('./assets/upcoming_events_button.png');
       case 'Annual Report':
         return require('./assets/annual_report_button.png');
       case 'Our Impact':
@@ -23,8 +23,8 @@ const GetButtons = () => {
         return require('./assets/for_kids_button.png');
       case 'About Us':
         return require('./assets/about_us_button.png');
-      case 'Blog':
-        return require('./assets/blog_button.png');
+      case 'Volunteering':
+        return require('./assets/volunteering_button.png');
       case 'Programs':
         return require('./assets/programs_button.png');
       case 'Donate':
@@ -38,12 +38,12 @@ const GetButtons = () => {
 
   const buttons = [];
   const buttonNames = new Map([
-    ['Partnerships', 'NONE'],
+    ['Upcoming Events', 'NONE'],
     ['Annual Report', 'AnnualReport'],
     ['Our Impact', 'NONE'],
     ['For Kids', 'NONE'],
-    ['Blog', 'NONE'],
     ['Programs', 'NONE'],
+    ['Volunteering', 'NONE'],
     ['Donate', 'NONE'],
     ['About Us', 'NONE'],
     ['Contact Us', 'NONE'],
@@ -105,6 +105,19 @@ const Home = () => {
           </View>
 
           { /* Content */ }
+
+          <View style={{alignItems: 'center'}}>
+            <View style={{backgroundColor: 'gray', width: width-40, height: 2}}>
+            </View>
+          </View>
+
+          <View style={{alignItems: 'center', paddingVertical: 30}}>
+          <Text style={{fontSize: 24, fontFamily: 'Futura-Medium'}}>
+            BUILDING HEALTHY, VIBRANT
+            COMMUNITIES STARTS HERE
+          </Text>
+          </View>
+
 
         </ScrollView>
 
