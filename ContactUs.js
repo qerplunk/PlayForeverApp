@@ -1,6 +1,5 @@
 import { React } from 'react';
 import { ImageBackground, Linking, StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
-
 import { COLORS } from './Colors';
 
 const LogoButton = ({name, imageURL, webURL}) => {

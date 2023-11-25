@@ -1,6 +1,5 @@
 import { React } from 'react';
 import { StyleSheet, SafeAreaView, ScrollView, View, Text, TouchableOpacity } from 'react-native';
-
 import { COLORS } from './Colors';
 
 const LineBreak = () => {
@@ -25,6 +24,12 @@ const Programs = ({ navigation }) => {
       </TouchableOpacity>
 
       <ScrollView style={{height: '100%', backgroundColor: 'lightgray'}} bounces='false'>
+        <View style={{alignItems: 'center', paddingBottom: 20}}>
+          <Text style={{fontSize: 22, fontFamily: 'Futura-Medium'}}>
+            Our Programs
+          </Text>
+        </View>
+
         <View style={{alignItems: 'center'}}>
           <Text style={styles.programTitles}>BASKETBALL PROGRAMS</Text>
           <Text style={styles.programDescriptions}>Youth basketball leagues</Text>
