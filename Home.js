@@ -66,6 +66,9 @@ const GetButtons = () => {
             case 'Contact Us':
               navigation.navigate('ContactUs')
               break;
+            case 'About Us':
+              navigation.navigate('AboutUs')
+              break;
             default:
               console.log("NONE");
               break;
@@ -121,8 +124,7 @@ const Home = () => {
 
           <View style={{alignItems: 'center', paddingVertical: 30}}>
           <Text style={{fontSize: 24, fontFamily: 'Futura-Medium'}}>
-            BUILDING HEALTHY, VIBRANT
-            COMMUNITIES STARTS HERE
+            BUILDING HEALTHY, VIBRANT COMMUNITIES STARTS HERE
           </Text>
           </View>
 
@@ -132,7 +134,7 @@ const Home = () => {
           />
 
           <Text style={{fontSize: 20, fontFamily: 'Futura-Medium', paddingVertical: 30, paddingHorizontal: 20}}>
-            Play Forever offers a range of programs and services aimed to fulfill the needs of youth, families and communities
+            PlayForever offers a range of programs and services aimed to fulfill the needs of the youth, families and communities
           </Text>
 
           <FlatList

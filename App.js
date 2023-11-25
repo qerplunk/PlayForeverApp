@@ -6,6 +6,7 @@ import Home from './Home';
 import MemberPage from './MemberPage';
 import Programs from './Programs';
 import ContactUs from './ContactUs';
+import AboutUs from './AboutUs';
 
 const Stack = createStackNavigator();
 
@@ -40,6 +41,13 @@ export default function App() {
         <Stack.Screen
           name='ContactUs'
           component={ContactUs}
+          options={{headerShown: false}}
+        />
+
+        { /* ABOUT US screen */ }
+        <Stack.Screen
+          name='AboutUs'
+          component={AboutUs}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
