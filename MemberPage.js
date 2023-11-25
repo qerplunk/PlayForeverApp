@@ -9,7 +9,7 @@ const MemberPage = ({ navigation }) => {
           style={styles.back}
           onPress={() => navigation.navigate('Home')}
         >
-          <Text>Go back</Text>
+          <Text style={styles.back.text}>Go back</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -22,9 +22,15 @@ const styles = StyleSheet.create({
     borderWidth: 1.2,
     backgroundColor: 'white',
     width: 100,
-    height: 50,
+    height: 40,
     alignItems: 'center',
     justifyContent: 'center',
+    borderRadius: 5,
+    backgroundColor: 'white',
+    text: {
+      fontFamily: 'Futura-Medium',
+      fontSize: 16,
+    }
   },
 });
 

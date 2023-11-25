@@ -4,6 +4,8 @@ import { StatusBar } from 'react-native';
 
 import Home from './Home';
 import MemberPage from './MemberPage';
+import Programs from './Programs';
+import ContactUs from './ContactUs';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +26,20 @@ export default function App() {
         <Stack.Screen
           name='MemberPage'
           component={MemberPage}
+          options={{headerShown: false}}
+        />
+
+        { /* PROGRAMS screen */ }
+        <Stack.Screen
+          name='Programs'
+          component={Programs}
+          options={{headerShown: false}}
+        />
+
+        { /* CONTACT US screen */ }
+        <Stack.Screen
+          name='ContactUs'
+          component={ContactUs}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

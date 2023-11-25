@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 import { ImageBackground, Dimensions, ScrollView, StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import HomeBanner from './HomeBanner'
 import SideMenu from './SideMenu'
@@ -11,6 +12,8 @@ const frameWidth = width;
 const buttonWidth = frameWidth / 3;
 
 const GetButtons = () => {
+  const navigation = useNavigation();
+
   const getImageSource = (buttonName) => {
     switch (buttonName) {
       case 'Upcoming Events':
@@ -57,6 +60,12 @@ const GetButtons = () => {
           switch (key) {
             case 'Annual Report':
               console.log("Annual report not ready");
+              break;
+            case 'Programs':
+              navigation.navigate('Programs')
+              break;
+            case 'Contact Us':
+              navigation.navigate('ContactUs')
               break;
             default:
               console.log("NONE");
