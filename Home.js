@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { ImageBackground, Dimensions, ScrollView, StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
+import { Image, ImageBackground, Dimensions, ScrollView, StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import HomeBanner from './HomeBanner'
@@ -94,7 +94,7 @@ const Home = () => {
   };
 
   return (
-    <SafeAreaView style={{backgroundColor:COLORS.navy_blue}}>
+    <SafeAreaView style={{backgroundColor:COLORS.navy_blue, height: '100%'}}>
 
       { /* Home banner */ }
       <HomeBanner updateSideMenu={updateSideMenu}/>
@@ -127,6 +127,13 @@ const Home = () => {
           </Text>
           </View>
 
+          <Image
+            style={{width:450, height: 320}}
+            source={require('./assets/community.jpg')}
+          />
+
+          <View style={{padding: 200}}>
+          </View>
 
         </ScrollView>
 
