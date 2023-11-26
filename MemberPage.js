@@ -27,8 +27,8 @@ const MemberPage = ({ navigation }) => {
         </View>
 
         <View>
-            <Text style={{left: -50, top: -38, marginHorizontal: 60, fontFamily: 'Futura-Medium', fontSize: 18, color: 'gray'}}>
-              Here you can see your volunteering history
+            <Text style={{left: -80, top: -38, marginHorizontal: 90, fontFamily: 'Futura-Medium', fontSize: 18, color: 'gray'}}>
+              Here you can see your volunteering and program history with PlayForever
             </Text>
         </View>
 
