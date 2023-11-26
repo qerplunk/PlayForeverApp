@@ -35,31 +35,38 @@ const ContactUs = ({ navigation }) => {
 
       <View style={{height: '100%', backgroundColor: 'lightgray'}}>
         <View style={{alignItems: 'center'}}>
-          <Text style={{fontSize: 22, fontFamily: 'Futura-Medium'}}>
+          <Text style={{fontSize: 22, fontFamily: 'Futura-Medium', marginTop: 10}}>
             Get in contact with us!
           </Text>
         </View>
 
-        <LogoButton
-          name='FaceBook'
-          imageURL={require('./assets/facebook_logo.png')}
-          webURL={'https://www.facebook.com/Playforever.ca/'}
-        />
-        <LogoButton
-          name='Twitter'
-          imageURL={require('./assets/twitter_logo.png')}
-          webURL={'https://twitter.com/playforever_ca'}
-        />
-        <LogoButton
-          name='Instagram'
-          imageURL={require('./assets/instagram_logo.png')}
-          webURL={'https://www.instagram.com/playforever.ca/'}
-        />
-        <LogoButton
-          name='LinkedIn'
-          imageURL={require('./assets/linkedin_logo.png')}
-          webURL={'https://www.linkedin.com/company/play-forever/?originalSubdomain=ca'}
-        />
+        <View style={{marginTop: 20}}>
+          <LogoButton
+            name='FaceBook'
+            imageURL={require('./assets/facebook_logo.png')}
+            webURL={'https://www.facebook.com/Playforever.ca/'}
+          />
+          <LogoButton
+            name='Twitter'
+            imageURL={require('./assets/twitter_logo.png')}
+            webURL={'https://twitter.com/playforever_ca'}
+          />
+          <LogoButton
+            name='Instagram'
+            imageURL={require('./assets/instagram_logo.png')}
+            webURL={'https://www.instagram.com/playforever.ca/'}
+          />
+          <LogoButton
+            name='LinkedIn'
+            imageURL={require('./assets/linkedin_logo.png')}
+            webURL={'https://www.linkedin.com/company/play-forever/?originalSubdomain=ca'}
+          />
+          <LogoButton
+            name='Email'
+            imageURL={require('./assets/email_logo.png')}
+            webURL={'mailto:info@playforever.com'}
+          />
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -82,18 +89,15 @@ const styles = StyleSheet.create({
     }
   },
   logoButton: {
-    width: 50,
-    height: 50,
-    borderColor: 'white',
-    borderWidth: 0.5,
+    width: 40,
+    height: 40,
     marginTop: 20,
     marginBottom: 20,
     marginLeft: 20,
-    backgroundColor: 'black',
     alignSelf: 'flex-start',
     text: {
       color: 'black',
-      top: 42,
+      top: 30,
       fontSize: 22,
       fontFamily: 'Futura-Medium',
       padding: 4
