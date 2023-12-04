@@ -32,7 +32,6 @@ const SideMenu = () => {
     <View
       style={{opacity: 0.93, position: 'absolute', width: 300, height: 900, backgroundColor: 'black'}}
     >
-      <TextButton text={'Archived'} />
       <TextButton text={'App Settings'} />
       <TextButton text={'Feedback'} />
       <TextButton text={'Archived'} />
