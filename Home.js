@@ -40,15 +40,15 @@ const GetButtons = () => {
 
   const buttons = [];
   const buttonNames = new Map([
+    ['Programs', 'NONE'],
     ['Upcoming Events', 'NONE'],
+    ['For Kids', 'NONE'],
+    ['Volunteering', 'NONE'],
     ['Annual Report', 'AnnualReport'],
     ['Our Impact', 'NONE'],
-    ['For Kids', 'NONE'],
-    ['Programs', 'NONE'],
-    ['Volunteering', 'NONE'],
-    ['Donate', 'NONE'],
-    ['About Us', 'NONE'],
     ['Contact Us', 'NONE'],
+    ['About Us', 'NONE'],
+    ['Donate', 'NONE'],
   ]);
 
   buttonNames.forEach(function(_, key) {
