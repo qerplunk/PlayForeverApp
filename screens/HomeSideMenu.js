@@ -4,7 +4,7 @@ import { ImageBackground, View, Linking, Text, TouchableOpacity, StyleSheet } fr
 const TextButton = ({text}) => {
   return (
       <TouchableOpacity
-        style={styles.textButton.button}
+        style={styles.textButton.container}
       >
         <Text style={styles.textButton.text}>
           {text}
@@ -62,7 +62,7 @@ const HomeSideMenu = () => {
 
 const styles = StyleSheet.create({
   textButton: {
-    button: {
+    container: {
       width: 150,
       marginTop: 20,
       marginLeft: 20,

@@ -1,10 +1,10 @@
 import { React, useState } from 'react';
 import { FlatList, Image, ImageBackground, Dimensions, ScrollView, StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { COLORS } from '../Colors'
 
 import HomeBanner from './HomeBanner'
 import HomeSideMenu from './HomeSideMenu'
+import { COLORS } from '../Colors'
 
 const {width} = Dimensions.get('window');
 const frameWidth = width;

@@ -1,5 +1,7 @@
 import { React } from 'react';
-import { Image, StyleSheet, SafeAreaView, ScrollView, View, Text, TouchableOpacity } from 'react-native';
+import { Image, StyleSheet, SafeAreaView, ScrollView, View, Text } from 'react-native';
+
+import BackButton from '../components/BackButton';
 import { COLORS } from '../Colors';
 
 const LineBreak = () => {
@@ -14,14 +16,11 @@ const LineBreak = () => {
 const Programs = ({ navigation }) => {
   return(
     <SafeAreaView style={{height: '100%', backgroundColor: COLORS.navy_blue}}>
-      <TouchableOpacity
-        style={styles.back}
-        onPress={() => navigation.navigate('Home')}
-      >
-        <Text style={styles.back.text}>
-          Back
-        </Text>
-      </TouchableOpacity>
+
+      <BackButton
+        navigation={navigation}
+        destination={'Home'}
+      />
 
       <ScrollView style={{height: '100%', backgroundColor: 'lightgray'}} bounces='false'>
         <View style={{alignItems: 'center', paddingBottom: 20}}>
@@ -113,21 +112,6 @@ const styles = StyleSheet.create({
   programTitles: {
     fontSize: 20,
     fontFamily: 'Futura-Bold',
-  },
-  back: {
-    borderColor: 'black',
-    borderWidth: 1,
-    width: 100,
-    height: 40,
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: 10,
-    borderRadius: 5,
-    backgroundColor: 'white',
-    text: {
-      fontFamily: 'Futura-Medium',
-      fontSize: 16,
-    }
   },
 });
 

@@ -1,16 +1,18 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, Image } from 'react-native';
+
+import BackButton from '../components/BackButton';
 import { COLORS } from '../Colors';
 
-const MemberPage = ({ navigation }) => {
+const MemberPage = ({navigation}) => {
   return (
     <SafeAreaView style={{height: '100%', backgroundColor: COLORS.navy_blue}}>
-        <TouchableOpacity
-          style={styles.back}
-          onPress={() => navigation.navigate('Home')}
-        >
-          <Text style={styles.back.text}>Back</Text>
-        </TouchableOpacity>
+
+      <BackButton
+        navigation={navigation}
+        destination={'Home'}
+      />
+
       <ScrollView style={{padding: 10, backgroundColor: 'lightgray', height: '100%'}} bounces='false'>
 
         <View style={{flexDirection: 'row', paddingTop: 10}}>
@@ -83,24 +85,5 @@ const MemberPage = ({ navigation }) => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  back: {
-    borderColor: 'black',
-    borderWidth: 1.2,
-    backgroundColor: 'white',
-    width: 100,
-    height: 40,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 5,
-    backgroundColor: 'white',
-    margin: 10,
-    text: {
-      fontFamily: 'Futura-Medium',
-      fontSize: 16,
-    }
-  },
-});
 
 export default MemberPage;

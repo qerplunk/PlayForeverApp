@@ -1,5 +1,7 @@
 import { React } from 'react';
 import { ImageBackground, Linking, StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
+
+import BackButton from '../components/BackButton';
 import { COLORS } from '../Colors';
 
 const LogoButton = ({name, imageURL, webURL}) => {
@@ -21,17 +23,14 @@ const LogoButton = ({name, imageURL, webURL}) => {
   );
 }
 
-const ContactUs = ({ navigation }) => {
+const ContactUs = ({navigation}) => {
   return (
     <SafeAreaView style={{height: '100%', backgroundColor: COLORS.navy_blue}}>
-      <TouchableOpacity
-        style={styles.back}
-        onPress={() => navigation.navigate('Home')}
-      >
-        <Text style={styles.back.text}>
-          Back
-        </Text>
-      </TouchableOpacity>
+
+      <BackButton
+        navigation={navigation}
+        destination={'Home'}
+      />
 
       <View style={{height: '100%', backgroundColor: 'lightgray'}}>
         <View style={{alignItems: 'center'}}>
@@ -73,21 +72,6 @@ const ContactUs = ({ navigation }) => {
 }
 
 const styles = StyleSheet.create({
-  back: {
-    borderColor: 'black',
-    borderWidth: 1,
-    width: 100,
-    height: 40,
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: 10,
-    borderRadius: 5,
-    backgroundColor: 'white',
-    text: {
-      fontFamily: 'Futura-Medium',
-      fontSize: 16,
-    }
-  },
   logoButton: {
     width: 40,
     height: 40,
