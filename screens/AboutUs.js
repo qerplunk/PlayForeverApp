@@ -1,6 +1,6 @@
 import { React } from 'react';
 import { Image, SafeAreaView, ScrollView, View, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { COLORS } from './Colors';
+import { COLORS } from '../Colors';
 
 const AboutUs = ({ navigation }) => {
   return(
@@ -9,7 +9,7 @@ const AboutUs = ({ navigation }) => {
         style={styles.back}
         onPress={() => navigation.navigate('Home')}
       >
-        <Text style={styles.back.text}>Go back</Text>
+        <Text style={styles.back.text}>Back</Text>
       </TouchableOpacity>
       <ScrollView style={{padding: 10, backgroundColor: 'lightgray', height: '100%'}} bounces='false'>
       </ScrollView>
@@ -28,7 +28,7 @@ const AboutUs = ({ navigation }) => {
         <View style={{alignItems: 'center', borderColor:'#404040', borderWidth: 2}}>
           <Image
             style={{width: 415}}
-            source={require('./assets/founder.jpeg')}
+            source={require('../assets/founder.jpeg')}
           />
         </View>
 

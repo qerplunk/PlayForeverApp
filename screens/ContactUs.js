@@ -1,6 +1,6 @@
 import { React } from 'react';
 import { ImageBackground, Linking, StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
-import { COLORS } from './Colors';
+import { COLORS } from '../Colors';
 
 const LogoButton = ({name, imageURL, webURL}) => {
   return (
@@ -29,7 +29,7 @@ const ContactUs = ({ navigation }) => {
         onPress={() => navigation.navigate('Home')}
       >
         <Text style={styles.back.text}>
-          Go Back
+          Back
         </Text>
       </TouchableOpacity>
 
@@ -43,27 +43,27 @@ const ContactUs = ({ navigation }) => {
         <View style={{marginTop: 20}}>
           <LogoButton
             name='FaceBook'
-            imageURL={require('./assets/facebook_logo.png')}
+            imageURL={require('../assets/facebook_logo.png')}
             webURL={'https://www.facebook.com/Playforever.ca/'}
           />
           <LogoButton
             name='Twitter'
-            imageURL={require('./assets/twitter_logo.png')}
+            imageURL={require('../assets/twitter_logo.png')}
             webURL={'https://twitter.com/playforever_ca'}
           />
           <LogoButton
             name='Instagram'
-            imageURL={require('./assets/instagram_logo.png')}
+            imageURL={require('../assets/instagram_logo.png')}
             webURL={'https://www.instagram.com/playforever.ca/'}
           />
           <LogoButton
             name='LinkedIn'
-            imageURL={require('./assets/linkedin_logo.png')}
+            imageURL={require('../assets/linkedin_logo.png')}
             webURL={'https://www.linkedin.com/company/play-forever/?originalSubdomain=ca'}
           />
           <LogoButton
             name='Email'
-            imageURL={require('./assets/email_logo.png')}
+            imageURL={require('../assets/email_logo.png')}
             webURL={'mailto:info@playforever.com'}
           />
         </View>

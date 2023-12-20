@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
-import { COLORS } from './Colors';
+import { COLORS } from '../Colors';
 
 const MemberPage = ({ navigation }) => {
   return (
@@ -9,7 +9,7 @@ const MemberPage = ({ navigation }) => {
           style={styles.back}
           onPress={() => navigation.navigate('Home')}
         >
-          <Text style={styles.back.text}>Go back</Text>
+          <Text style={styles.back.text}>Back</Text>
         </TouchableOpacity>
       <ScrollView style={{padding: 10, backgroundColor: 'lightgray', height: '100%'}} bounces='false'>
 
@@ -21,7 +21,7 @@ const MemberPage = ({ navigation }) => {
           <View>
             <Image
               style={{left: 170, width: 70, height: 70}}
-              source={require('./assets/member_default_icon.png')}
+              source={require('../assets/member_default_icon.png')}
             />
           </View>
         </View>

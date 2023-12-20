@@ -27,7 +27,7 @@ const LogoButton = ({imageURL, webURL}) => {
   );
 }
 
-const SideMenu = () => {
+const HomeSideMenu = () => {
   return(
     <View
       style={{opacity: 0.93, position: 'absolute', width: 300, height: 900, backgroundColor: 'black'}}
@@ -40,19 +40,19 @@ const SideMenu = () => {
       <View style={{padding: 30}} />
 
       <LogoButton
-        imageURL={require('./assets/facebook_logo.png')}
+        imageURL={require('../assets/facebook_logo.png')}
         webURL={'https://www.facebook.com/Playforever.ca/'}
       />
       <LogoButton
-        imageURL={require('./assets/twitter_logo.png')}
+        imageURL={require('../assets/twitter_logo.png')}
         webURL={'https://twitter.com/playforever_ca'}
       />
       <LogoButton
-        imageURL={require('./assets/instagram_logo.png')}
+        imageURL={require('../assets/instagram_logo.png')}
         webURL={'https://www.instagram.com/playforever.ca/'}
       />
       <LogoButton
-        imageURL={require('./assets/linkedin_logo.png')}
+        imageURL={require('../assets/linkedin_logo.png')}
         webURL={'https://www.linkedin.com/company/play-forever/?originalSubdomain=ca'}
       />
 
@@ -87,4 +87,4 @@ const styles = StyleSheet.create({
 })
 
 
-export default SideMenu;
+export default HomeSideMenu;

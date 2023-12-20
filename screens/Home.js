@@ -1,10 +1,10 @@
 import { React, useState } from 'react';
 import { FlatList, Image, ImageBackground, Dimensions, ScrollView, StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { COLORS } from './Colors'
+import { COLORS } from '../Colors'
 
 import HomeBanner from './HomeBanner'
-import SideMenu from './SideMenu'
+import HomeSideMenu from './HomeSideMenu'
 
 const {width} = Dimensions.get('window');
 const frameWidth = width;
@@ -16,25 +16,25 @@ const GetButtons = () => {
   const getImageSource = (buttonName) => {
     switch (buttonName) {
       case 'Upcoming Events':
-        return require('./assets/upcoming_events_button.png');
+        return require('../assets/upcoming_events_button.png');
       case 'Annual Report':
-        return require('./assets/annual_report_button.png');
+        return require('../assets/annual_report_button.png');
       case 'Our Impact':
-        return require('./assets/our_impact_button.png');
+        return require('../assets/our_impact_button.png');
       case 'For Kids':
-        return require('./assets/for_kids_button.png');
+        return require('../assets/for_kids_button.png');
       case 'About Us':
-        return require('./assets/about_us_button.png');
+        return require('../assets/about_us_button.png');
       case 'Volunteering':
-        return require('./assets/volunteering_button.png');
+        return require('../assets/volunteering_button.png');
       case 'Programs':
-        return require('./assets/programs_button.png');
+        return require('../assets/programs_button.png');
       case 'Donate':
-        return require('./assets/donate_button.png');
+        return require('../assets/donate_button.png');
       case 'Contact Us':
-        return require('./assets/contact_us_button.png');
+        return require('../assets/contact_us_button.png');
       default:
-        return require('./assets/icon.png');
+        return require('../assets/icon.png');
     }
   };
 
@@ -43,8 +43,8 @@ const GetButtons = () => {
     ['Programs', 'NONE'],
     ['Upcoming Events', 'NONE'],
     ['For Kids', 'NONE'],
-    ['Volunteering', 'NONE'],
     ['Annual Report', 'AnnualReport'],
+    ['Volunteering', 'NONE'],
     ['Our Impact', 'NONE'],
     ['Contact Us', 'NONE'],
     ['About Us', 'NONE'],
@@ -77,8 +77,8 @@ const GetButtons = () => {
       >
         <ImageBackground
           source={getImageSource(key)}
-          style={{opacity: 0.45, ...StyleSheet.absoluteFillObject, position: 'absolute'}}
-          blurRadius={2}
+          style={{opacity: 0.52, ...StyleSheet.absoluteFillObject, position: 'absolute'}}
+          blurRadius={1}
         />
         <Text style={{fontSize: 20, fontFamily: 'Futura-Medium', textShadowColor: 'white', textShadowRadius: 3, textAlign: 'center'}}> {key} </Text>
       </TouchableOpacity>
@@ -89,17 +89,17 @@ const GetButtons = () => {
 }
 
 const Home = () => {
-  const [showSideMenu, setShowSideMenu] = useState(false);
+  const [showHomeSideMenu, setShowHomeSideMenu] = useState(false);
 
-  const updateSideMenu = (show) => {
-    setShowSideMenu(show);
+  const updateHomeSideMenu = (show) => {
+    setShowHomeSideMenu(show);
   };
 
   return (
     <SafeAreaView style={{backgroundColor:COLORS.navy_blue, height: '100%'}}>
 
       { /* Home banner */ }
-      <HomeBanner updateSideMenu={updateSideMenu}/>
+       <HomeBanner updateHomeSideMenu={updateHomeSideMenu}/>
 
       { /* Scrollable area */ }
       <View>
@@ -130,7 +130,7 @@ const Home = () => {
 
           <Image
             style={{width:450, height: 320}}
-            source={require('./assets/community.jpg')}
+            source={require('../assets/community.jpg')}
           />
 
           <Text style={{fontSize: 20, fontFamily: 'Futura-Medium', paddingVertical: 30, paddingHorizontal: 20}}>
@@ -162,8 +162,8 @@ const Home = () => {
         </ScrollView>
 
         {
-          showSideMenu ?
-            <SideMenu/>
+          showHomeSideMenu ?
+            <HomeSideMenu/>
             :
             null
         }

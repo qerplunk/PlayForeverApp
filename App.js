@@ -2,11 +2,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'react-native';
 
-import Home from './Home';
-import MemberPage from './MemberPage';
-import Programs from './Programs';
-import ContactUs from './ContactUs';
-import AboutUs from './AboutUs';
+import Home from './screens/Home';
+import MemberPage from './screens/MemberPage';
+import Programs from './screens/Programs';
+import ContactUs from './screens/ContactUs';
+import AboutUs from './screens/AboutUs';
 
 const Stack = createStackNavigator();
 

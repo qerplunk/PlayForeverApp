@@ -1,6 +1,6 @@
 import { React } from 'react';
 import { Image, StyleSheet, SafeAreaView, ScrollView, View, Text, TouchableOpacity } from 'react-native';
-import { COLORS } from './Colors';
+import { COLORS } from '../Colors';
 
 const LineBreak = () => {
   return (
@@ -19,7 +19,7 @@ const Programs = ({ navigation }) => {
         onPress={() => navigation.navigate('Home')}
       >
         <Text style={styles.back.text}>
-          Go Back
+          Back
         </Text>
       </TouchableOpacity>
 
@@ -35,7 +35,7 @@ const Programs = ({ navigation }) => {
           <Text style={styles.programDescriptions}>Youth basketball leagues</Text>
           <Text style={styles.programDescriptions}>Basketball summer camp</Text>
           <Text style={styles.learnMore}>Tap to learn more!</Text>
-          <Image source={require('./assets/programs.png')} style={{width: 380, height: 380, marginVertical: 10}} />
+          <Image source={require('../assets/programs.png')} style={{width: 380, height: 380, marginVertical: 10}} />
         </View>
 
         <LineBreak/>
@@ -44,7 +44,7 @@ const Programs = ({ navigation }) => {
           <Text style={styles.programTitles}>HOMEWORK CLUB</Text>
           <Text style={styles.programDescriptions}>Building bright futures</Text>
           <Text style={styles.learnMore}>Tap to learn more!</Text>
-          <Image source={require('./assets/for_kids.jpg')} style={{width: 380, height: 380, marginVertical: 10}} />
+          <Image source={require('../assets/for_kids.jpg')} style={{width: 380, height: 380, marginVertical: 10}} />
         </View>
 
         <LineBreak/>
@@ -53,7 +53,7 @@ const Programs = ({ navigation }) => {
           <Text style={styles.programTitles}>PARKS & RECREATION REVITILIZATION</Text>
           <Text style={styles.programDescriptions}>Reviving community spaces</Text>
           <Text style={styles.learnMore}>Tap to learn more!</Text>
-          <Image source={require('./assets/favicon.png')} style={{width: 380, height: 380, marginVertical: 10}} />
+          <Image source={require('../assets/favicon.png')} style={{width: 380, height: 380, marginVertical: 10}} />
         </View>
 
         <LineBreak/>
@@ -62,7 +62,7 @@ const Programs = ({ navigation }) => {
           <Text style={styles.programTitles}>HEALTH & WELLNESS WORKSHOPS</Text>
           <Text style={styles.programDescriptions}>Promoting healthy lifestyle choices</Text>
           <Text style={styles.learnMore}>Tap to learn more!</Text>
-          <Image source={require('./assets/favicon.png')} style={{width: 380, height: 380, marginVertical: 10}} />
+          <Image source={require('../assets/favicon.png')} style={{width: 380, height: 380, marginVertical: 10}} />
         </View>
 
         <LineBreak/>
@@ -71,7 +71,7 @@ const Programs = ({ navigation }) => {
           <Text style={styles.programTitles}>ARTS & CRAFTS</Text>
           <Text style={styles.programDescriptions}>Bringing imagination to life</Text>
           <Text style={styles.learnMore}>Tap to learn more!</Text>
-          <Image source={require('./assets/favicon.png')} style={{width: 380, height: 380, marginVertical: 10}} />
+          <Image source={require('../assets/favicon.png')} style={{width: 380, height: 380, marginVertical: 10}} />
         </View>
 
         <LineBreak/>
@@ -80,7 +80,7 @@ const Programs = ({ navigation }) => {
           <Text style={styles.programTitles}>BOOK CLUB</Text>
           <Text style={styles.programDescriptions}>Journey through pages</Text>
           <Text style={styles.learnMore}>Tap to learn more!</Text>
-          <Image source={require('./assets/favicon.png')} style={{width: 380, height: 380, marginVertical: 10}} />
+          <Image source={require('../assets/favicon.png')} style={{width: 380, height: 380, marginVertical: 10}} />
         </View>
 
         <LineBreak/>
@@ -89,7 +89,7 @@ const Programs = ({ navigation }) => {
           <Text style={styles.programTitles}>SENIOR TECH & HEALTH SESSIONS</Text>
           <Text style={styles.programDescriptions}>Connecting seniors through technology</Text>
           <Text style={styles.learnMore}>Tap to learn more!</Text>
-          <Image source={require('./assets/favicon.png')} style={{width: 380, height: 380, marginVertical: 10}} />
+          <Image source={require('../assets/favicon.png')} style={{width: 380, height: 380, marginVertical: 10}} />
         </View>
 
         <LineBreak/>
