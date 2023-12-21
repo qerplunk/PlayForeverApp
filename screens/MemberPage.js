@@ -6,14 +6,14 @@ import { COLORS } from '../Colors';
 
 const MemberPage = ({navigation}) => {
   return (
-    <SafeAreaView style={{height: '100%', backgroundColor: COLORS.navy_blue}}>
+    <SafeAreaView style={{backgroundColor: COLORS.navy_blue}}>
 
       <BackButton
         navigation={navigation}
         destination={'Home'}
       />
 
-      <ScrollView style={{padding: 10, backgroundColor: 'lightgray', height: '100%'}} bounces='false'>
+      <ScrollView style={{padding: 10, backgroundColor: COLORS.background, height: '100%'}} bounces='false'>
 
         <View style={{flexDirection: 'row', paddingTop: 10}}>
           <View>

@@ -15,14 +15,14 @@ const LineBreak = () => {
 
 const Programs = ({ navigation }) => {
   return(
-    <SafeAreaView style={{height: '100%', backgroundColor: COLORS.navy_blue}}>
+    <SafeAreaView style={{backgroundColor: COLORS.navy_blue}}>
 
       <BackButton
         navigation={navigation}
         destination={'Home'}
       />
 
-      <ScrollView style={{height: '100%', backgroundColor: 'lightgray'}} bounces='false'>
+      <ScrollView style={{height: '100%', backgroundColor: COLORS.background}} bounces='false'>
         <View style={{alignItems: 'center', paddingBottom: 20}}>
           <Text style={{fontSize: 22, fontFamily: 'Futura-Medium'}}>
             Our Programs

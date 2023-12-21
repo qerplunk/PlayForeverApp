@@ -16,7 +16,7 @@ const LogoButton = ({name, imageURL, webURL}) => {
           source={imageURL}
         />
       </TouchableOpacity>
-      <Text style={styles.logoButton.text}>
+      <Text style={styles.text}>
         {name}
       </Text>
     </View>
@@ -32,7 +32,7 @@ const ContactUs = ({navigation}) => {
         destination={'Home'}
       />
 
-      <View style={{height: '100%', backgroundColor: 'lightgray'}}>
+      <View style={{height: '100%', backgroundColor: COLORS.background}}>
         <View style={{alignItems: 'center'}}>
           <Text style={{fontSize: 22, fontFamily: 'Futura-Medium', marginTop: 10}}>
             Get in contact with us!
@@ -79,13 +79,14 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginLeft: 20,
     alignSelf: 'flex-start',
-    text: {
-      color: 'black',
-      top: 30,
-      fontSize: 22,
-      fontFamily: 'Futura-Medium',
-      padding: 4
-    }
+  },
+  text: {
+    height: 30,
+    color: 'black',
+    top: 27,
+    fontSize: 22,
+    fontFamily: 'Futura-Medium',
+    paddingLeft: 4,
   }
 });
 

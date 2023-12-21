@@ -38,52 +38,37 @@ const GetButtons = () => {
     }
   };
 
-  const buttons = [];
-  const buttonNames = new Map([
-    ['Programs', 'NONE'],
-    ['Upcoming Events', 'NONE'],
-    ['For Kids', 'NONE'],
-    ['Annual Report', 'AnnualReport'],
-    ['Volunteering', 'NONE'],
-    ['Our Impact', 'NONE'],
-    ['Contact Us', 'NONE'],
-    ['About Us', 'NONE'],
-    ['Donate', 'NONE'],
-  ]);
+  const buttonsMap = new Map();
+  buttonsMap.set('Programs', 'Programs');
+  buttonsMap.set('Upcoming Events', 'NONE');
+  buttonsMap.set('For Kids', 'NONE');
+  buttonsMap.set('Annual Report', 'NONE');
+  buttonsMap.set('Volunteering', 'NONE');
+  buttonsMap.set('Our Impact', 'NONE');
+  buttonsMap.set('Contact Us', 'ContactUs');
+  buttonsMap.set('About Us', 'AboutUs');
+  buttonsMap.set('Donate', 'NONE');
 
-  buttonNames.forEach(function(_, key) {
-    buttons.push(
+  const buttons = Array.from(buttonsMap).map(([buttonName, destination]) => (
       <TouchableOpacity
+        key={buttonName}
         style={styles.button}
         onPress={() => {
-          switch (key) {
-            case 'Annual Report':
-              console.log("Annual report not ready");
-              break;
-            case 'Programs':
-              navigation.navigate('Programs')
-              break;
-            case 'Contact Us':
-              navigation.navigate('ContactUs')
-              break;
-            case 'About Us':
-              navigation.navigate('AboutUs')
-              break;
-            default:
-              console.log("NONE");
-              break;
+          if (destination === 'NONE') {
+            console.log(buttonName + " not ready");
+          } else {
+            navigation.navigate(destination)
           }
         }}
       >
         <ImageBackground
-          source={getImageSource(key)}
+          source={getImageSource(buttonName)}
           style={{opacity: 0.52, ...StyleSheet.absoluteFillObject, position: 'absolute'}}
           blurRadius={1}
         />
-        <Text style={{fontSize: 20, fontFamily: 'Futura-Medium', textShadowColor: 'white', textShadowRadius: 3, textAlign: 'center'}}> {key} </Text>
+        <Text style={{fontSize: 20, fontFamily: 'Futura-Medium', textShadowColor: 'white', textShadowRadius: 3, textAlign: 'center'}}> {buttonName} </Text>
       </TouchableOpacity>
-    )
-  });
+  ));
 
   return buttons;
 }
@@ -104,7 +89,7 @@ const Home = () => {
       { /* Scrollable area */ }
       <View>
         <ScrollView
-          style={{backgroundColor: 'lightgray', height: '100%'}}
+          style={{backgroundColor: COLORS.background, height: '100%'}}
           bounces='false'
         >
 
@@ -137,6 +122,7 @@ const Home = () => {
             PlayForever offers a range of programs and services aimed to fulfill the needs of the youth, families and communities
           </Text>
 
+          {/*
           <FlatList
             data={[
               {key: 'Arts & Crafts'},
@@ -155,6 +141,7 @@ const Home = () => {
             renderItem={({item}) => <Text style={{fontSize: 18, paddingLeft: 10}}>• {item.key}</Text>}
           >
           </FlatList>
+           */ }
 
           <View style={{padding: 200}}>
           </View>
@@ -176,12 +163,12 @@ const Home = () => {
 
 const styles = StyleSheet.create({
   frame: {
+    backgroundColor: 'lightgray',
+    width: frameWidth,
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'flex-start',
     justifyContent:'flex-start',
-    width: frameWidth,
-    backgroundColor: 'lightblue',
   },
   button: {
     flexDirection: 'row',
@@ -192,8 +179,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightgray',
     borderWidth: 1,
     borderColor: 'lightgray',
-  }
-
+  },
 });
 
 export default Home;
