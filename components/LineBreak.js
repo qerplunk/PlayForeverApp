@@ -7,9 +7,9 @@ const LineBreak = ({color, thickness, marginY}) => {
       <View
         style={{
           width: 360,
-          backgroundColor: color != undefined ? color : 'black',
-          height: thickness != undefined ? thickness : 2,
-          marginVertical: marginY != undefined ? marginY : 30}}>
+          backgroundColor: color !== undefined ? color : 'black',
+          height: thickness !== undefined ? thickness : 2,
+          marginVertical: marginY !== undefined ? marginY : 30}}>
       </View>
     </View>
   );
