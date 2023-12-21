@@ -2,16 +2,8 @@ import { React } from 'react';
 import { Image, StyleSheet, SafeAreaView, ScrollView, View, Text } from 'react-native';
 
 import BackButton from '../components/BackButton';
+import LineBreak from '../components/LineBreak';
 import { COLORS } from '../Colors';
-
-const LineBreak = () => {
-  return (
-    <View style={{alignItems: 'center'}}>
-      <View style={{width: 360, height: 2, backgroundColor: 'black', marginVertical: 40}}>
-      </View>
-    </View>
-  );
-};
 
 const Programs = ({ navigation }) => {
   return(

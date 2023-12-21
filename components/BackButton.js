@@ -10,7 +10,7 @@ const BackButton = ({navigation, destination, text}) => {
       onPress={() => navigation.navigate(destination)}
     >
       <Text style={BackButtonStyles.text}>
-        {text ? text : 'Back'}
+        {text != undefined ? text : 'Back'}
       </Text>
     </TouchableOpacity>
   );

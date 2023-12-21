@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import HomeBanner from './HomeBanner'
 import HomeSideMenu from './HomeSideMenu'
+import LineBreak from '../components/LineBreak';
 import { COLORS } from '../Colors'
 
 const {width} = Dimensions.get('window');
@@ -102,10 +103,7 @@ const Home = () => {
 
           { /* Content */ }
 
-          <View style={{alignItems: 'center'}}>
-            <View style={{backgroundColor: 'gray', width: width-40, height: 2}}>
-            </View>
-          </View>
+          <LineBreak marginY={0} />
 
           <View style={{alignItems: 'center', paddingVertical: 30}}>
           <Text style={{fontSize: 24, fontFamily: 'Futura-Medium'}}>
