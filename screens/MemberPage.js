@@ -13,7 +13,7 @@ const MemberPage = ({navigation}) => {
         destination={'Home'}
       />
 
-      <ScrollView style={{padding: 10, backgroundColor: COLORS.background, height: '100%'}} bounces='false'>
+      <ScrollView style={{padding: 10, backgroundColor: COLORS.off_white, height: '100%'}} bounces='false'>
 
         <View style={{flexDirection: 'row', paddingTop: 10}}>
           <View>

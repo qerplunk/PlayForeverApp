@@ -32,7 +32,7 @@ const ContactUs = ({navigation}) => {
         destination={'Home'}
       />
 
-      <View style={{height: '100%', backgroundColor: COLORS.background}}>
+      <View style={{height: '100%', backgroundColor: COLORS.off_white}}>
         <View style={{alignItems: 'center'}}>
           <Text style={{fontSize: 22, fontFamily: 'Futura-Medium', marginTop: 10}}>
             Get in contact with us!

@@ -13,8 +13,8 @@ const AboutUs = ({navigation}) => {
         destination={'Home'}
       />
 
-      <ScrollView style={{backgroundColor: COLORS.background, height: '100%'}} bounces='false'>
-        <View style={{height: '100%', backgroundColor: COLORS.background}}>
+      <ScrollView style={{backgroundColor: COLORS.off_white, height: '100%'}} bounces='false'>
+        <View style={{height: '100%', backgroundColor: COLORS.off_white}}>
           <View style={{alignItems: 'center'}}>
             <Text style={{fontSize: 22, fontFamily: 'Futura-Medium'}}>
               About us

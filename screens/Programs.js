@@ -14,7 +14,7 @@ const Programs = ({ navigation }) => {
         destination={'Home'}
       />
 
-      <ScrollView style={{height: '100%', backgroundColor: COLORS.background}} bounces='false'>
+      <ScrollView style={{height: '100%', backgroundColor: COLORS.off_white}} bounces='false'>
         <View style={{alignItems: 'center', paddingBottom: 20}}>
           <Text style={{fontSize: 22, fontFamily: 'Futura-Medium'}}>
             Our Programs
