@@ -7,7 +7,7 @@ import HomeSideMenu from './HomeSideMenu'
 import LineBreak from '../components/LineBreak';
 import { COLORS } from '../Colors'
 
-const {width} = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 const frameWidth = width;
 const buttonWidth = frameWidth / 3;
 
@@ -88,9 +88,15 @@ const Home = () => {
        <HomeBanner updateHomeSideMenu={updateHomeSideMenu}/>
 
       { /* Scrollable area */ }
-      <View>
+      <View style={{backgroundColor: '#dddddd'}}>
+        <Image
+          style={{position: 'absolute', width: width/2+220, height: height/2+340, opacity: 0.5}}
+          blurRadius={4}
+          source={require('../assets/acrylic_paint.jpg')}
+        />
+
         <ScrollView
-          style={{backgroundColor: COLORS.background, height: '100%'}}
+          style={{height: '100%'}}
           bounces='false'
         >
 
@@ -103,18 +109,37 @@ const Home = () => {
 
           { /* Content */ }
 
-          <LineBreak marginY={0} />
+          <LineBreak marginY={20} />
 
-          <View style={{alignItems: 'center', paddingVertical: 30}}>
-          <Text style={{fontSize: 24, fontFamily: 'Futura-Medium'}}>
-            BUILDING HEALTHY, VIBRANT COMMUNITIES STARTS HERE
-          </Text>
+          <View style={{paddingBottom: 30}}>
+
+            <View style={{top: 30, alignSelf: 'center', alignItems: 'center'}}>
+                <Text style={{fontSize: 24, fontFamily: 'Futura-Medium'}}>
+                  BUILDING HEALTHY,
+                </Text>
+                <Text style={{fontSize: 24, fontFamily: 'Futura-Medium'}}>
+                  VIBRANT COMMUNITIES
+                </Text>
+
+                <View style={{flexDirection: 'row'}}>
+                  <Text style={{fontSize: 24, fontFamily: 'Futura-Medium'}}>
+                    STARTS
+                  </Text>
+                  <Text style={{alignItems: 'center', color: COLORS.cinabar, fontSize: 24, fontFamily: 'Futura-Medium', paddingLeft: 8}}>
+                    HERE
+                  </Text>
+                  <Text style={{fontSize: 24, fontFamily: 'Futura-Medium'}}>
+                    !
+                  </Text>
+                </View>
+
+              <Image
+                style={{width: width, height: width}}
+                source={require('../assets/community.jpg')}
+              />
+            </View>
+
           </View>
-
-          <Image
-            style={{width:450, height: 320}}
-            source={require('../assets/community.jpg')}
-          />
 
           <Text style={{fontSize: 20, fontFamily: 'Futura-Medium', paddingVertical: 30, paddingHorizontal: 20}}>
             PlayForever offers a range of programs and services aimed to fulfill the needs of the youth, families and communities
